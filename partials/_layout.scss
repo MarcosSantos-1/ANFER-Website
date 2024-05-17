@@ -1,0 +1,432 @@
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.bg-home{
+    position: relative;
+}
+.bg-home::before{
+    content: '';
+    display: block;
+    position:absolute;
+    background-image: linear-gradient(to bottom, rgba(6,18,30,0.1),#06121e), url("./assets/MainBanner.png");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat:no-repeat ;
+    background-position: 50% 0;
+    opacity: 0.9;
+}
+
+.hero{
+    color: $white-normal;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 1240px;
+        font-size: 46px;
+    }
+    p{
+        text-align: center;
+        margin: 14px 0;
+    }
+}
+
+.button-contact{
+    padding: 14px 28px;
+    color: $white-normal;
+    background-color: $red-normal;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+}
+.button-contact:hover{
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+
+  //---------- --> SOBRE: <-- -------------//
+
+.about{
+    background-color: $primary-normal;
+    overflow: hidden;
+    color: $white-normal;
+}
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+    img{
+        max-width: 570px;
+    }
+}
+.about-content div{
+    flex: 1;
+}
+.about-description{
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+
+
+  //---------- --> SERVIÇOS: <-- -------------//
+
+.services{
+    background-color: $white-normal;
+    color: $black-normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+}
+.services-content h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+.services-content{
+    line-height: 150%;
+    margin-bottom: 25px;
+    text-align:justify;
+    max-width: 800px;
+}
+.services-content p{
+    margin-top: 35px;
+    margin-bottom: 25px;
+    
+}
+
+
+  //---------- --> GRID DOS SERVIÇOS: <-- -------------//
+
+.servicos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);    
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 44px 34px 44px;
+    margin-bottom: 30px;
+}
+.servico{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    background-color: $white-normal;
+    border-radius: 8px;
+    box-shadow: 0px -1px 17px -4px rgba(0,0,0,0.45);
+    overflow: hidden; //vai esconder os cantos arredondando as bordas de tudo o que passar da imagem
+    img{
+        width: 100%;
+        height: 354px;
+        max-width: 354px;
+        transition: 0.2s;
+    }
+}
+.servico img:hover{ //-> Aumentar o tamanho da imagem quando passar o Mouse
+        transform: scale(1.2);
+        z-index: 1;
+}
+.servico-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    background-color: $white-normal;
+    z-index: 99;
+}
+.servico-info button{
+    color: $white-normal;
+    background-color: $red-normal;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 0;
+    cursor: default;
+}
+.services-buttom{
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: $white-normal;
+    background-color: $red-light;
+    transition: background-color 0.8s;
+}
+.services-buttom:hover{
+    border: 1px solid $red-dark;
+    background-color: $red-dark;
+}
+.services-buttom img {
+    width: 20px;
+    height: 20px;
+    margin-left: 9px;
+  }
+
+  //---------- --> FORM: <-- -------------//
+
+
+  //---------- --> SERVIÇOS: <-- -------------//
+
+  .servicesForm{
+    top: 80px;
+    line-height: 150%;
+
+    background-color: $white-normal;
+    color: $black-normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.servicesForm-content h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+.servicesForm-content{
+    line-height: 150%;
+    margin-bottom: 25px;
+    text-align:justify;
+}
+
+  .form-control, form{
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.form-inputs{
+    display: flex;
+    gap: 10px;
+    width: 800px;
+}
+
+
+.input-field{
+    width: 50%;
+    height: 55px;
+    background: transparent;
+    border: 2px solid #AAA;
+    border-radius: 10px;
+    padding-inline: 20px;
+    outline: none;
+}
+textarea{
+    width: 100%;
+    height: 250px;
+    background: transparent;
+    border: 2px solid #AAA;
+    padding: 15px 20px;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+}
+.form-buttom>.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #b42b2b;
+    font-weight: bold;
+    color: #efefef;
+    width: 40%;
+    height: 30px;
+    font-size: 15px;
+
+
+}
+.form-buttom>.btn:hover{
+    background-color: #d34040;
+}
+.form-buttom i{
+  margin-left: 15px;
+    font-size: 18px;
+    rotate: -45deg;
+}
+
+  //---------- --> FOOTER: <-- -------------//
+
+footer {
+    padding: 20px;
+
+  }
+  .footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+        color: $white-normal;
+    }
+  }
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  .footer-logo img {
+    display: block;
+    margin: 0 auto;
+  }
+  .footer-logo p {
+    margin-top: 5px;
+    font-weight: bold;
+    color: $white-normal;
+  }
+  .footer-social {
+    margin-right: 20px;
+    margin-top: 25px;
+    margin-bottom: 45px;
+  }
+  .footer-social a {
+    margin-right: 10px;
+  }
+  .footer-social img {
+    width: 40px;
+    height: 40px;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 45px;
+  }
+  .footer-contact .item {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    line-height: 35px;
+  }
+  .footer-contact .item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .footer-contact .item p {
+    margin: 0px;
+  }
+
+
+  //---------- --> BOTAO FLUTUANTE DO WHATSAPP: <-- -------------//
+
+  .btn-whatsapp{
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 99;
+
+    img{
+        max-width: 74px;
+    }
+    img:hover{
+        transform: scale(1.1);
+    }
+}
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: $black-normal;
+    color: $white-normal;
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+@media screen and (max-width:768px){
+    .btn-whatsapp{
+        img{
+            max-width: 64px;
+        }
+    }
+}
+
+
+//---------- --> RESPONSIVIDADE: <-- -------------//
+
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+    }
+    .logo {
+      margin-bottom: 20px;
+    }
+    .redes-sociais {
+      margin: 0 auto;
+    }
+    .footer-contact {
+      flex-direction: column;
+    }
+  }
+
+@media screen and (max-width: 1080px){
+    .servicos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px){
+  .form-inputs{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px){
+    .servicos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .servico{
+      margin-bottom: 5px;
+  }
+    .about-content{
+        flex-direction: column;
+    }
+    .form-inputs{
+      width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hero h1{
+        font-size: 24px;
+    }
+}
+
+
+
+
